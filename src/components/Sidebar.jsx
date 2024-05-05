@@ -1,51 +1,59 @@
-import React from 'react'
-import { 
-    BiBookAlt, 
-    BiHome, 
-    BiSolidUniversalAccess, 
-    BiSolidGroup, 
-    BiCart, 
-    BiBasket,  
-} from 'react-icons/bi';
-import '../styles/sidebar.css'
+// import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap/js/dist/dropdown'
 
-const Sidebar = () => {
-  return (
-    <div className="menu">
-        <div className="logo">
-            <BiBookAlt className='logo-icon'/>
-            <h2>LocalBiz</h2>
-        </div>
+function Sidebar(){
+    return (
+        <div className='container-fluid'>
+            <div className='row'>
+                <div className='bg-dark col-auto col-md-2 min-vh-100 d-flex justify-content-between flex-column'>
+                    <div>
+                        <a className='text-decoration-none text-white d-flex align-itemcenter ms-3 mt-2' href="#">
+                            <span className='ms-1 fs-4'>LocalBiz</span>
+                        </a>
+                        <hr className='text-secondary' />
+                        <ul className='nav nav-pills flex-column'>
+                            <li className='nav-item text-white fs-4'>
+                                <a className='nav-link text-white fs-5' aria-current='page' href="#">
+                                    <i className='bi bi-speedometer2'></i>
+                                    <span className='ms-2'>Dashboard</span>
+                                </a>
+                            </li>
+                            <li className='nav-item text-white fs-4'>
+                                <a className='nav-link text-white fs-5' aria-current='page' href="#">
+                                    <i className='bi bi-table'></i>
+                                    <span className='ms-2'>Orders</span>
+                                </a>
+                            </li>
+                            <li className='nav-item text-white fs-4'>
+                                <a className='nav-link text-white fs-5' aria-current='page' href="#">
+                                    <i className='bi bi-grid'></i>
+                                    <span className='ms-2'>Products</span>
+                                </a>
+                            </li>
+                            <li className='nav-item text-white fs-4'>
+                                <a className='nav-link text-white fs-5' aria-current='page' href="#">
+                                    <i className='bi bi-person-circle'></i>
+                                    <span className='ms-2'>Customers</span>
+                                </a>
+                            </li>
 
-        <div className="menu--list">
-            <a href="#" className="item">
-                <BiHome className="icon"/>
-                Dashboard
-            </a>
+                        </ul>
+                    </div>
+                    <div className='dropdown open'>
+                        <a className='text-decoration-none text-white dropdown-toggle p-3' type='button' id='triggerId' data-bs-toggle='dropdown' aria-expanded='false'>
+                            <i className='bi bi-person-circle'></i> <span className='ms-2'>LocalBiz</span>
+                        </a>
+                    </div>
+                    <div className='dropdown-menu' aria-labelledby='triggerId'>
+                        <a className='dropdown-item' href="">action</a>
+                        <a className='dropdown-item' href="">action</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="menu--list">
-            <a href="#" className="item">
-                <BiBasket className="icon"/>
-                Productos
-            </a>
-        </div><div className="menu--list">
-            <a href="#" className="item">
-                <BiCart className="icon"/>
-                Ventas
-            </a>
-        </div><div className="menu--list">
-            <a href="#" className="item">
-                <BiSolidGroup className="icon"/>
-                Clientes
-            </a>
-        </div><div className="menu--list">
-            <a href="#" className="item">
-                <BiSolidUniversalAccess className="icon"/>
-                Proveedores
-            </a>
-        </div>
-    </div>
-  )
+    );
 }
 
 export default Sidebar
