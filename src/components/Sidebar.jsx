@@ -12,7 +12,7 @@ function Sidebar(){
                 <div className='bg-dark col-auto col-md-2 min-vh-100 d-flex justify-content-between flex-column'>
                     <div>
                         <a className='text-decoration-none text-white d-non d-sm-inline d-flex align-itemcenter ms-3 mt-2' href="#">
-                            <span className='ms-1 fs-4 d-none d-sm-inline'>LocalBiz</span>
+                            <span className='ms-3 fs-4 d-none d-sm-inline'>LocalBiz</span>
                         </a>
                         <hr className='text-secondary' />
                         <ul className='nav nav-pills flex-column'>
