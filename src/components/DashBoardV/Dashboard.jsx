@@ -1,11 +1,13 @@
 import React from 'react'
 import ContentHeader from './ContentHeader'
+import CardPrd from './Cards'
 
 
 const Dashboard = () => {
   return (
-    <div className="content">
+    <div>
         <ContentHeader />
+        <CardPrd />
     </div>
   )
 }
