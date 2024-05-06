@@ -2,7 +2,7 @@ import React from 'react'
 import ContentHeader from './ContentHeader'
 
 
-const Content = () => {
+const Dashboard = () => {
   return (
     <div className="content">
         <ContentHeader />
@@ -10,4 +10,4 @@ const Content = () => {
   )
 }
 
-export default Content
+export default Dashboard

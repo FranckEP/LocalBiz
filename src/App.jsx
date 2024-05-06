@@ -1,12 +1,32 @@
 import React from 'react'
 import Sidebar from './components/Sidebar'
-import Content from './components/DashBoardV/Content'
 import './App.css'
+import Customer from './components/CustomersV/Customer'
+import Dashboard from './components/DashBoardV/Dashboard'
+import Sales from './components/SalesV/Sales'
+import Products from './components/ProductsV/Products'
+import ProvidersV from './components/ProvidersV/ProvidersV'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    element: <Sidebar />,
+    children: [
+      { path: '/', element: <Dashboard /> },
+      { path: '/dashboard', element: <Dashboard /> },
+      { path: '/sales', element: <Sales /> },
+      { path: '/products', element: <Products /> },
+      { path: '/customers', element: <Customer /> },
+      { path: '/providers', element: <ProvidersV /> },
+      { path: '*', element: <div>Not Found</div>}
+    ]
+  }
+]
+);
 
 const App = () => {
   return (
-      <Sidebar />
-      
+      <RouterProvider router={router}/>
   )
 }
 
