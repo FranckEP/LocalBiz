@@ -1,38 +1,19 @@
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 2.3rem;
-    height: 94vh;
+.navbar {
+    background-color: #074173
 }
-.logo {
-    align-items: center;
-    gap: 20px;
-    color: #27374d;
-    text-align: center;
-    padding: 20px;
-    display: flex;
+.nav-pills li a:hover {
+    background-color: #1679AB;
 }
-.logo-icon {
-    font-size: 1.4rem;
+.logoimg {
+    color: white;
+    width: 1em;
+    height: 1em;
 }
-.menu--list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.dropdown-menu {
+    margin-inline: -20px;
+    justify-content: center;
+    background-color: #1679AB;
 }
-.menu--list .item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 1.1rem;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-    color: #27374d;
-}
-.menu--list .item:hover {
-    background: #27374d;
-    color: #dde6ed;
+.dropdown-item {
+    color: white;
 }
