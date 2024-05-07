@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/js/dist/dropdown'
 import '../styles/sidebar.css'
-import { Link} from 'react-router-dom'
+import { Link, Outlet} from 'react-router-dom'
 
 
 function Sidebar(){
@@ -59,6 +59,9 @@ function Sidebar(){
                             <a className='dropdown-item' href="#">Log Out</a>
                         </div>
                     </div>
+                </div>
+                <div className='col'>
+                    <Outlet />
                 </div>
             </div>
         </div>
