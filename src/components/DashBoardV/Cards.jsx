@@ -1,4 +1,5 @@
 import React from 'react'
+// import './card.css'
 import {Button, Card, Container, Col, Row} from 'react-bootstrap';
 
 const products = [
@@ -39,7 +40,7 @@ const CardPrd = () => {
             {
               products.map((product) => {
                 return (
-                  <Col sm={4}>
+                  <Col sm={6}>
                     <div>
                       <Card className='mb-2 px-2 py-2'>
                           <Card.Img fluid variant="top" src={product.image} width="20%"/>

@@ -12,3 +12,10 @@
     gap: 1.5rem;
     justify-content: space-between;
 }
+.app-container{
+    display: flex;
+}
+
+.sidebar{
+    background-color: #074173;
+}

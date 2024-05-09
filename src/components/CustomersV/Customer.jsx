@@ -1,8 +1,9 @@
 import React from 'react'
+import './Customer.css'
 
 const Customer = () => {
   return (
-    <div>Customer</div>
+    <div className='test'>Customer</div>
   )
 }
 
