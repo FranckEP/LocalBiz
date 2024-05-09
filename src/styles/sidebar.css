@@ -18,15 +18,27 @@
     color: white;
 }
 .container-sidebar{
-    width: 170px;
+    min-width: 170px;
     margin: 0;
     padding-right: 0;
 }
+.nav-item{
+    width: 158px;
+}
 
-@media (max-width: 576px) {
+@media (max-width: 577px) {
     .container-sidebar {
-        width: 66px;
+        min-width: 66px;
         margin: 0;
-        padding-right: 0;
+        padding: 0px;
+    }
+    .nav-item{
+        width: 52px;
+    }
+    .nav-pills{
+        margin-left: 19px;
+    }
+    .open{
+        margin-left: 9px;
     }
 }
