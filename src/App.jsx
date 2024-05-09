@@ -1,11 +1,11 @@
 import React from 'react'
-import Sidebar from './components/Sidebar'
+import Sidebar from './pages/Sidebar'
 import './App.css'
-import Customer from './components/CustomersV/Customer'
-import Dashboard from './components/DashBoardV/Dashboard'
-import Sales from './components/SalesV/Sales'
-import Products from './components/ProductsV/Products'
-import ProvidersV from './components/ProvidersV/ProvidersV'
+import Customer from './pages/CustomersV/Customer'
+import Dashboard from './pages/DashBoardV/Dashboard'
+import Sales from './pages/SalesV/Sales'
+import Products from './pages/ProductsV/Products'
+import ProvidersV from './pages/ProvidersV/ProvidersV'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 
 const router = createBrowserRouter([

@@ -2,6 +2,7 @@
     background-color: #074173;
     height: 100vh;
     transition-duration: 0.3s;
+    transition: ease-in;
     min-width: 170px;
 
 }
