@@ -1,5 +1,4 @@
 import React from 'react'
-// import './card.css'
 import {Button, Card, Container, Col, Row} from 'react-bootstrap';
 
 const products = [

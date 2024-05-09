@@ -1,32 +1,42 @@
 .navbar {
     background-color: #074173;
+    height: 100vh;
+    transition-duration: 0.3s;
+    min-width: 170px;
+
 }
 .nav-pills li a:hover {
     background-color: #1679AB;
 }
-.logoimg {
-    color: white;
-    width: 1em;
-    height: 1em;
-}
+
 .dropdown-menu {
-    margin-inline: -20px;
-    justify-content: center;
-    background-color: #1679AB;
+    background-color: transparent;
+    align-items: center;
+    border: 0;
+    padding: 0;
 }
 .dropdown-item {
     color: white;
 }
-.container-sidebar{
-    width: 170px;
-    margin: 0;
-    padding-right: 0;
+.outlet {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
-@media (max-width: 576px) {
-    .container-sidebar {
-        width: 66px;
+@media (max-width: 577px) {
+    .navbar {
+        min-width: 66px;
         margin: 0;
-        padding-right: 0;
+        padding: 0px;
+    }
+    .nav-item{
+        width: 52px;
+    }
+    .dropdown-menu {
+        min-width: 50px;
+        align-items: center;
     }
 }

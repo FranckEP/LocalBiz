@@ -6,22 +6,11 @@ import Dashboard from './components/DashBoardV/Dashboard'
 import Sales from './components/SalesV/Sales'
 import Products from './components/ProductsV/Products'
 import ProvidersV from './components/ProvidersV/ProvidersV'
-import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom'
-
-const AppLayout = () =>(
-  <div className="app-container">
-  <div className="sidebar">
-    <Sidebar />
-  </div>
-  <div className="outlet">
-    <Outlet />
-  </div>
-</div>
-);
+import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
-    element: <AppLayout />,
+    element: <Sidebar />,
     children: [
       { path: '/', element: <Dashboard /> },
       { path: '/dashboard', element: <Dashboard /> },
