@@ -1,18 +1,20 @@
 .navbar {
     background-color: #074173;
+    height: 100vh;
+    transition-duration: 0.3s;
+    transition: ease-in;
+    min-width: 170px;
+
 }
 .nav-pills li a:hover {
     background-color: #1679AB;
 }
-.logoimg {
-    color: white;
-    width: 1em;
-    height: 1em;
-}
+
 .dropdown-menu {
-    margin-inline: -20px;
-    justify-content: center;
-    background-color: #1679AB;
+    background-color: transparent;
+    align-items: center;
+    border: 0;
+    padding: 0;
 }
 .dropdown-item {
     color: white;
@@ -22,6 +24,13 @@
     margin: 0;
     padding-right: 0;
 }
+.outlet {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
 .nav-item{
     width: 158px;
 }
@@ -29,16 +38,20 @@
 @media (max-width: 577px) {
     .container-sidebar {
         min-width: 66px;
+    }
+}
+
+@media (max-width: 577px) {
+    .navbar {
+        min-width: 66px;
         margin: 0;
         padding: 0px;
     }
     .nav-item{
         width: 52px;
     }
-    .nav-pills{
-        margin-left: 19px;
-    }
-    .open{
-        margin-left: 9px;
+    .dropdown-menu {
+        min-width: 50px;
+        align-items: center;
     }
 }
