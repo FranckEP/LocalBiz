@@ -24,7 +24,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 }
 
 @media (max-width: 577px) {

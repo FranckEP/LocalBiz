@@ -9,7 +9,7 @@ import { Link, Outlet} from 'react-router-dom'
 function Sidebar(){
     return (
         <>
-        <div className='container-fluid'>
+        <div className='container-fluid '>
             <div className='row'>
                 <div className='navbar col-auto col-md-2 min-vh-100 d-flex justify-content-between flex-column '>
                     <div>
