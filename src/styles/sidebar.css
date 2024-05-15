@@ -31,15 +31,6 @@
     flex-direction: column;
     overflow: auto;
 }
-.nav-item{
-    width: 158px;
-}
-
-@media (max-width: 577px) {
-    .container-sidebar {
-        min-width: 66px;
-    }
-}
 
 @media (max-width: 577px) {
     .navbar {
