@@ -6,3 +6,9 @@
     display: flex;
 }
 
+.sidebar{
+    background-color: #074173;
+}
+.app-container{
+    min-height: 100vh;
+}

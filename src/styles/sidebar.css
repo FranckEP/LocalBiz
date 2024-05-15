@@ -19,6 +19,11 @@
 .dropdown-item {
     color: white;
 }
+.container-sidebar{
+    min-width: 170px;
+    margin: 0;
+    padding-right: 0;
+}
 .outlet {
     position: relative;
     height: 100vh;
