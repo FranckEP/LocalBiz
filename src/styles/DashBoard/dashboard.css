@@ -1,0 +1,95 @@
+.dashboard {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+  }
+
+  @media (max-width: 991px) {
+    .dashboard {
+      padding: 0 20px;
+    }
+  }
+
+
+  .dashboard-title {
+    color: #1679ab;
+    align-self: start;
+    margin-left: 2px;
+    font: italic 500 40px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .dashboard-title {
+      margin-top: 20px;
+      margin-left: 2px;
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .graph-container {
+      max-width: 100%;
+    }
+  }
+
+  .graph-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  @media (max-width: 991px) {
+    .graph-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+
+  .graph-column {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+  }
+
+  @media (max-width: 991px) {
+    .graph-column {
+      width: 100%;
+    }
+  }
+
+  .graph {
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    flex-grow: 1;
+    align-items: center;
+    color: #1679ab;
+    width: 100%;
+    padding: flex;
+    font: 15px Montserrat, -apple-system, Roboto, Helvetica;
+  }
+  .subtitle {
+    font: italic 800 15px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 991px) {
+    .graph {
+      max-width: 100%;
+      margin-top: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .bar-chart {
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .donut-chart {
+    margin-top: 20px;
+    align-items: center;
+  }

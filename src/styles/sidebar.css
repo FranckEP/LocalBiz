@@ -29,7 +29,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 }
 .nav-item{
     width: 158px;
