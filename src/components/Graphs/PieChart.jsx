@@ -29,8 +29,6 @@ function DonutChartUsageExample() {
           valueFormatter={valueFormatter}
           colors={['blue', 'violet', 'yellow']}
           className="w-64 h-64"
-          tremor-content-emphasis= "black"
-
         />
       </div>
       <div className="flex items-center justify-center space-x-6">
