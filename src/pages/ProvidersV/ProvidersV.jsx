@@ -1,8 +1,10 @@
-import React from 'react'
 import Table from '../../components/Table'
-import ButtonNew from '../../components/ButtonNew'
+import '../../styles/dashboard.css'
+import { useState, useEffect } from 'react';
 
 const ProvidersV = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const columns = [
     {
         name: 'Nit',
@@ -40,13 +42,40 @@ const ProvidersV = () => {
     { nit: 11000, name: 'Kaito Kuroba', contact: '17' , transaction: '2'},
     { nit: 12000, name: 'Shinichi Kudo', contact: '17' , transaction: '2'} 
     ]
+  
+  useEffect(() => {
+    if (searchTerm === '') {
+      setSearchResults(Data);
+    } else {
+      const results = Data.filter(person =>
+        person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        person.nit.toString().includes(searchTerm) ||
+        person.contact.includes(searchTerm) ||
+        person.transaction.includes(searchTerm)
+      );
+      setSearchResults(results);
+    }
+  }, [searchTerm]);
 
   return (
-    <div>
-      <h1>Providers</h1>
-      <ButtonNew/>
-        <Table columns={columns} data={Data}/>
-    </div>
+    <main className="dashboard flex">
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <h1 className="dashboard-title">Providers</h1>
+        <div className="flex justify-between items-center">
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
+            onChange={e => setSearchTerm(e.target.value)}
+          />
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-md">New</button>
+        </div>
+      </div>
+      <hr/>
+      <section className="graph-container">
+        <Table columns={columns} data={searchResults}/>
+      </section>
+    </main>
   )
 }
 

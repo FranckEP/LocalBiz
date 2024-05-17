@@ -28,7 +28,8 @@ function DonutChartUsageExample() {
           index="name"
           valueFormatter={valueFormatter}
           colors={['blue', 'violet', 'yellow']}
-          className="w-64 h-64"
+          className="w-60 h-60"
+          variant='donut'
         />
       </div>
       <div className="flex items-center justify-center space-x-6">

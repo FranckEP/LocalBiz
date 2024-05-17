@@ -17,8 +17,8 @@ function Sidebar(){
                             <i className='bi bi-kanban fs-5'></i>
                             <span className='ms-3 fs-4 d-none d-sm-inline'>LocalBiz</span>
                         </Link>
-                        <hr className='text-secondary' />
-                        <ul className='nav nav-pills flex-column'>
+                        <hr className='text-secondary mt-2' />
+                        <ul className='nav nav-pills flex-column mt-3'>
                             <li className='nav-item text-white fs-4'>
                                 <Link className='nav-link text-white fs-5' aria-current='page' to='/dashboard'>
                                     <i className='bi bi-speedometer2'></i>

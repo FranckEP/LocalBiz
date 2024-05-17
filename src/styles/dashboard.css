@@ -2,7 +2,7 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 15px 25px;
+    padding: 15px 15px;
   }
 
   @media (max-width: 991px) {
@@ -11,12 +11,11 @@
     }
   }
 
-
   .dashboard-title {
     color: #1679ab;
     align-self: start;
     margin-left: 2px;
-    font: italic 500 40px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    font: italic 500 35px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
   }
 
   @media (max-width: 991px) {
@@ -47,7 +46,7 @@
   }
 
   .graph-column {
-    margin-top: 5px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     line-height: normal;
@@ -69,9 +68,10 @@
     width: 100%;
     padding: flex;
     font: 15px Montserrat, -apple-system, Roboto, Helvetica;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   .subtitle {
-    font: italic 800 15px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    font: italic 800 20px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
     text-align: center;
     margin-top: 10px;
   }
@@ -80,7 +80,6 @@
     .graph {
       max-width: 100%;
       margin-top: 20px;
-      padding-right: 20px;
     }
   }
 
