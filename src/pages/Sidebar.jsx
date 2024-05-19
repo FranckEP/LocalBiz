@@ -6,7 +6,10 @@ import '../styles/sidebar.css'
 import { Link, Outlet} from 'react-router-dom'
 
 
-function Sidebar(){
+function Sidebar({setUser}){
+    const handleLogout = ()=>{
+        setUser([]);
+    }
     return (
         <>
         <div className='container-fluid '>
@@ -60,7 +63,7 @@ function Sidebar(){
                                 <i className='bi bi-gear-wide-connected ms-2 fs-5'></i>
                                 <span className='ms-2 d-none d-sm-inline fs-5'>Settings</span>
                             </Link>
-                            <Link className='dropdown-item' aria-current='page' to='/dashboard'>
+                            <Link className='dropdown-item' aria-current='page' onClick={handleLogout}>
                                 <i className='bi bi-box-arrow-in-left ms-2 fs-5'></i>
                                 <span className='ms-2 d-none d-sm-inline fs-5'>Log Out</span>
                             </Link>

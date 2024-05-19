@@ -1,4 +1,4 @@
-const EditForm = ({onClose }) => {
+const EditForm = ({onClose, selectedCustomer}) => {
   return (
     <form className="space-y-4">
         <button onClick={onClose} className="text-cyan-800 rounded-full w-9 h-9 flex items-center justify-center absolute top-4 right-6">
@@ -6,7 +6,7 @@ const EditForm = ({onClose }) => {
         </button>
         <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+            <input value={"prueba"} type="text" id="name" className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
         </div>
         <div>
             <label htmlFor="id" className="block text-sm font-medium text-gray-700">ID</label>

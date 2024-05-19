@@ -7,26 +7,40 @@ import Sales from './pages/SalesV/Sales'
 import Products from './pages/ProductsV/Products'
 import ProvidersV from './pages/ProvidersV/ProvidersV'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
+import Login from './/components/Login'
+import { useState } from 'react'
 
-const router = createBrowserRouter([
-  {
-    element: <Sidebar />,
-    children: [
-      { path: '/', element: <Dashboard /> },
-      { path: '/dashboard', element: <Dashboard /> },
-      { path: '/sales', element: <Sales /> },
-      { path: '/products', element: <Products /> },
-      { path: '/customers', element: <Customer /> },
-      { path: '/providers', element: <ProvidersV /> },
-      { path: '*', element: <div>Not Found</div>}
-    ]
-  }
-]
-);
+
+
 
 const App = () => {
+  
+  const [ user, setUser] = useState([]);
+  const router = createBrowserRouter([
+    {
+      element: <Sidebar setUser={setUser} />,
+      children: [
+        { path: '/', element: <Dashboard /> },
+        { path: '/dashboard', element: <Dashboard /> },
+        { path: '/sales', element: <Sales /> },
+        { path: '/products', element: <Products /> },
+        { path: '/customers', element: <Customer /> },
+        { path: '/providers', element: <ProvidersV /> },
+        { path: '*', element: <div>Not Found</div>}
+      ]
+    }
+  ]
+  );
   return (
-      <RouterProvider router={router}/>
+    <> 
+    {
+      !user.length > 0
+      ? <Login setUser={setUser}/>
+      : <RouterProvider router={router} />
+    }
+    
+    </>
+      
   )
 }
 
