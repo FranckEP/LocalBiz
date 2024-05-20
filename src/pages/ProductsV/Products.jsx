@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState} from 'react';
 import '../../styles/dashboard.css'
 import CardPrd from '../../components/Cards/CardPrd.jsx'
 
@@ -9,45 +9,72 @@ const Products = () => {
       name: "Indi",
       stock: 10,
       price: "$100",
-      provider: "PaniPuri"
+      provider: "PaniPuri",
+      category: "Food",
     },
     {
       image: "https://images.squarespace-cdn.com/content/v1/5c5b530f8d974055c4891586/1549736867236-XPU9OEQLCZ7U3XWY8I6J/Doritos-Net-Qty-Label-copy.png",
       name: "Doritos",
       stock: 20,
       price: "$200",
-      provider: "Doritos"
+      provider: "Doritos",
+      category: "Product",
     },
     {
       image: "https://images-platform.99static.com/HR3TgAJTUmwspCyqO7qMU3YeVOc=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/89/89577/attachment_89577057",
       name: "Product 3",
       stock: 30,
       price: "$300",
-      provider: "Kick Nuts"
+      provider: "Kick Nuts",
+      category: "Granos",
     }
   ];
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
+  const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   const filteredData = data.filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    item.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    item.category.toLowerCase().includes(selectedOption.toLowerCase())
   );
+
+  const uniqueCategories = data.reduce((categories, item) => {
+    return categories.includes(item.category) ? categories : [...categories, item.category];
+  }, []);
+
   return (
     <main className="dashboard flex">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <h1 className="dashboard-title">Products</h1>
         <div className="flex justify-between items-center">
+          <h2 className="sub">Categoria:</h2>
+          <select
+            value={selectedOption}
+            onChange={handleSelectChange}
+            placeholder="Filter by category"
+            className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
+          >
+          <option value="">Todas</option>
+          {uniqueCategories.map((category, index) => (
+            <option key={index} value={category}>
+              {category}
+            </option>
+          ))}
+          </select>
           <input
             type="text"
-            placeholder="Search by product name"
+            placeholder="Buscar producto"
             value={searchTerm}
             onChange={handleSearchChange}
             className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
           />
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md">New</button>
         </div>
       </div>
       <hr/>
@@ -60,6 +87,7 @@ const Products = () => {
               stock={item.stock}
               price={item.price}
               provider={item.provider}
+              category={item.category}
               buttonText="Add to Cart"
             />
           ))}

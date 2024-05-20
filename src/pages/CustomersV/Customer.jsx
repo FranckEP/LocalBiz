@@ -35,7 +35,7 @@ const Customer = () => {
   };
 
   const filteredData = data.filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    item.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
@@ -50,7 +50,7 @@ const Customer = () => {
             onChange={handleSearchChange}
             className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
           />
-          <button onClick={() => handleEditClick(item)} className="bg-blue-500 text-white px-4 py-2 rounded-md">New</button>
+          <button onClick={() => handleEditClick({})} className="bg-blue-500 text-white px-4 py-2 rounded-md">New</button>
         </div>
       </div>
       <hr/>
@@ -67,9 +67,9 @@ const Customer = () => {
         ))}
       </section>
       {showEditForm && selectedCustomer && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-          <section className="bg-gray-100 p-5 rounded-lg shadow-lg">
-            <EditForm customer={selectedCustomer} onClose={handleCloseClick}/>
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 ml-50">
+          <section className="bg-gray-100 p-4 sm:p-5 rounded-lg shadow-lg">
+              <EditForm customer={selectedCustomer} onClose={handleCloseClick}/>
           </section>
         </div>
       )}

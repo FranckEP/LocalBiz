@@ -75,6 +75,11 @@
     text-align: center;
     margin-top: 10px;
   }
+  .sub{
+    font: italic 800 15px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    text-align: center;
+    margin-right: 10px;
+  }
 
   @media (max-width: 991px) {
     .graph {
