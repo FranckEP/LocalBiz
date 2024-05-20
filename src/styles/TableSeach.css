@@ -1,0 +1,12 @@
+.testing-table{
+    width: 20%;
+    height: 150px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: scroll;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}

@@ -1,6 +1,8 @@
 import CardSales from '../../components/Cards/CardSales';
 import '../../styles/dashboard.css'
+import '../../styles/TableSeach.css'
 import { useState } from 'react';
+import TableSearch from '../../components/TableSearch';
 
 const Sales = () => {
   const [showEditForm, setShowEditForm] = useState(false);
@@ -99,6 +101,9 @@ const Sales = () => {
           />
         ))}
       </section>
+      <div className='testing-table'>
+      <TableSearch/>
+      </div>
       {/* {showEditForm && selectedCustomer && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
           <section className="bg-gray-100 p-5 rounded-lg shadow-lg">
