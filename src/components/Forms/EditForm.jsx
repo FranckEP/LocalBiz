@@ -1,7 +1,7 @@
 const EditForm = ({onClose, selectedCustomer}) => {
   return (
     <form className="space-y-4">
-        <button onClick={onClose} className="text-cyan-800 rounded-full w-9 h-9 flex items-center justify-center absolute top-4 right-6">
+        <button onClick={onClose} className="text-cyan-800 w-9 h-9 flex items-center justify-center absolute top-4 right-6">
             X
         </button>
         <div>

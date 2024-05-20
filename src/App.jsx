@@ -1,4 +1,3 @@
-import React from 'react'
 import Sidebar from './pages/Sidebar'
 import './App.css'
 import Customer from './pages/CustomersV/Customer'
@@ -7,6 +6,7 @@ import Sales from './pages/SalesV/Sales'
 import Products from './pages/ProductsV/Products'
 import ProvidersV from './pages/ProvidersV/ProvidersV'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
+import Cart from './pages/Cart/Cart'
 import Login from './/components/Login'
 import { useState } from 'react'
 
@@ -23,6 +23,7 @@ const App = () => {
         { path: '/', element: <Dashboard /> },
         { path: '/dashboard', element: <Dashboard /> },
         { path: '/sales', element: <Sales /> },
+      {path: '/cart', element: <Cart />},
         { path: '/products', element: <Products /> },
         { path: '/customers', element: <Customer /> },
         { path: '/providers', element: <ProvidersV /> },

@@ -8,21 +8,21 @@ const LatestSales = () => {
   ];
 
   return (
-    <div class="items-center w-full bg-transparent">
+    <div className="items-center w-full bg-transparent">
         <div>
-            <ul role="list" class="divide-y-2 divide-inherit">
+            <ul role="list" className="divide-y-2 divide-inherit">
                 {customers.map((customer) => (
-                <li class="py-0 sm:py-4 bg-transparent dark:bg-gray-800 ">
-                    <div class="flex items-center justify-between p-4">
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-bold text-cyan-900">
-                        {customer.name}
+                <li className="py-0 sm:py-4 bg-transparent dark:bg-gray-800 ">
+                    <div className="flex items-center justify-between p-4">
+                    <div className="flex-1 min-w-0">
+                        <p className="text-sm font-bold text-cyan-900">
+                          {customer.name}
                         </p>
-                        <p class="text-sm text-cyan-900 ">
-                        {customer.email}
+                        <p className="text-sm text-cyan-900 ">
+                          {customer.email}
                         </p>
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-black dark:text-white">
+                    <div className="inline-flex items-center text-base font-semibold text-black dark:text-white">
                         {customer.price}
                     </div>
                     </div>

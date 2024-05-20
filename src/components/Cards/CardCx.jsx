@@ -11,7 +11,7 @@ const CardCx = ({name, id, pending, buttonText, onEditClick}) => {
         </p>
       </div>
       <div className="px-2 pt-2 pb-4 flex justify-end">
-        <button onClick={onEditClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-sm">
+        <button onClick={onEditClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-sm" data-modal-target="crud-modal" data-modal-toggle="crud-modal" >
           {buttonText}
         </button>
       </div>

@@ -1,8 +1,8 @@
 import CardSales from '../../components/Cards/CardSales';
+import FormSales from '../../components/Forms/FormSales';
 import '../../styles/dashboard.css'
-import '../../styles/TableSeach.css'
-import { useState } from 'react';
-import TableSearch from '../../components/TableSearch';
+import {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 const Sales = () => {
   const [showEditForm, setShowEditForm] = useState(false);
@@ -22,7 +22,7 @@ const Sales = () => {
       name: 'John Doe',
       total: 100.00,
       totalPaid: 50.00,
-      paymentMethod: 'Credit Card',
+      paymentMethod: 'Efectivo',
       date: '2022-01-01',
     },
     {
@@ -30,9 +30,17 @@ const Sales = () => {
       name: 'Jane Doe',
       total: 200.00,
       totalPaid: 100.00,
-      paymentMethod: 'Cash',
+      paymentMethod: 'Transferencia',
       date: '2022-01-02',
     },
+    {
+      id: 2,
+      name: 'Jane Doe',
+      total: 900.00,
+      totalPaid: 100.00,
+      paymentMethod: 'En mora',
+      date: '2022-01-02',
+    }
   ];
   const [searchTerm, setSearchTerm] = useState('');
   const [filterDate, setFilterDate] = useState('');
@@ -49,6 +57,9 @@ const Sales = () => {
   const handlePaymentMethodChange = event => {
     setFilterPaymentMethod(event.target.value);
   };
+  const uniquePaymentMethod = data.reduce((paymentMethod, item) => {
+    return paymentMethod.includes(item.paymentMethod) ? paymentMethod : [...paymentMethod, item.paymentMethod];
+  }, []);
 
   const filteredData = data.filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
@@ -75,14 +86,21 @@ const Sales = () => {
             onChange={handleDateChange}
             className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
           />
-          <input
-            type="text"
-            placeholder="Filter by payment method"
+          <h2 className="sub">Pago:</h2>
+          <select
             value={filterPaymentMethod}
             onChange={handlePaymentMethodChange}
+            placeholder="Filter by category"
             className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
-          />
-          <button onClick={() => handleEditClick(item)} className="bg-blue-500 text-white px-4 py-2 rounded-md">New</button>
+          >
+          <option value="">Todos</option>
+          {uniquePaymentMethod.map((paymentMethod, index) => (
+            <option key={index} value={paymentMethod}>
+              {paymentMethod}
+            </option>
+          ))}
+          </select>
+          <Link to="/cart" className="bg-blue-500 text-white px-4 py-2 rounded-md inline-block">New</Link>
         </div>
       </div>
       <hr/>
@@ -101,16 +119,13 @@ const Sales = () => {
           />
         ))}
       </section>
-      <div className='testing-table'>
-      <TableSearch/>
-      </div>
-      {/* {showEditForm && selectedCustomer && (
+      {showEditForm && selectedCustomer && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
           <section className="bg-gray-100 p-5 rounded-lg shadow-lg">
-            <EditForm customer={selectedCustomer} onClose={handleCloseClick}/>
+            <FormSales customer={selectedCustomer} onClose={handleCloseClick}/>
           </section>
         </div>
-      )} */}
+      )}
     </main>
   );
 }
