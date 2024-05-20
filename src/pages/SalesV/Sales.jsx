@@ -19,7 +19,7 @@ const Sales = () => {
   const data = [
     {
       id: 1,
-      name: 'John Doe',
+      name: 'Pablo Doe',
       total: 100.00,
       totalPaid: 50.00,
       paymentMethod: 'Efectivo',
@@ -27,7 +27,7 @@ const Sales = () => {
     },
     {
       id: 2,
-      name: 'Jane Doe',
+      name: 'Pedro Doe',
       total: 200.00,
       totalPaid: 100.00,
       paymentMethod: 'Transferencia',
@@ -35,7 +35,7 @@ const Sales = () => {
     },
     {
       id: 2,
-      name: 'Jane Doe',
+      name: 'Josue Doe',
       total: 900.00,
       totalPaid: 100.00,
       paymentMethod: 'En mora',
