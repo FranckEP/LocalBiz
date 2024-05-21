@@ -8,13 +8,14 @@ import ProvidersV from './pages/ProvidersV/ProvidersV'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Cart from './pages/Cart/Cart'
 import Login from './/components/Login'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 
 
 
 
 const App = () => {
-  
+  const [isLoading, setIsLoading] = useState(true);
   const [ user, setUser] = useState([]);
   const router = createBrowserRouter([
     {
@@ -32,17 +33,29 @@ const App = () => {
     }
   ]
   );
+
+  useEffect(()=>{
+    const DataFetch = () =>{
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 2000)
+    };
+    DataFetch();
+  }, []);
+
   return (
     <> 
+    <PrimeReactProvider>
     {
       !user.length > 0
       ? <Login setUser={setUser}/>
       : <RouterProvider router={router} />
     }
-    
+    </PrimeReactProvider>
     </>
       
   )
 }
+
 
 export default App

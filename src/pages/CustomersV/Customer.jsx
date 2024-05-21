@@ -2,29 +2,35 @@ import { useState } from 'react';
 import CardCx from '../../components/Cards/CardCx.jsx'
 import '../../styles/dashboard.css'
 import EditForm from '../../components/Forms/EditForm.jsx';
+import { Dialog } from 'primereact/dialog';
 
+const style = {
+  width: "25vw",
+  background: "#f3f4f6",
+  padding: "15px",
+  borderRadius: "10px",
+};
 const Customer = () => {
   const [showEditForm, setShowEditForm] = useState(false);
   const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [visible, setVisible] = useState(false);
+  
 
   const handleEditClick = (item) => {
     setSelectedCustomer(item);
-    setShowEditForm(true);
-  };
-  const handleCloseClick = () => {
-    setShowEditForm(false);
+    setVisible(true);
   };
 
   const data = [
     {
       id: 1044330088,
       name: 'John Doe',
-      pending: '$1300'
+      pending: 1300
     },
     {
       id: 1053673483,
       name: 'Jane Smith',
-      pending: '$2000'
+      pending: 2000
     },
   ];
 
@@ -62,17 +68,17 @@ const Customer = () => {
             id={item.id}
             pending={item.pending}
             buttonText="Edit"
-            onEditClick={() => handleEditClick(item)}
+            onEditClick={() => handleEditClick(item)
+              
+            }
           />
+
         ))}
       </section>
-      {showEditForm && selectedCustomer && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 ml-50">
-          <section className="bg-gray-100 p-4 sm:p-5 rounded-lg shadow-lg">
-              <EditForm customer={selectedCustomer} onClose={handleCloseClick}/>
-          </section>
-        </div>
-      )}
+      <Dialog  visible={visible} onHide={() => setVisible(false)}
+                style={style} breakpoints={{ '960px': '30vw', '641px': '50vw' }} className='rounded-sm shadow-2xl'>
+                <EditForm customer={selectedCustomer}></EditForm>
+            </Dialog>
     </main>
   );
 };

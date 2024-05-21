@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #074173;
+    background-color: #2563EB;
     height: 100vh;
     transition-duration: 0.3s;
     transition: ease-in;
@@ -7,7 +7,8 @@
 
 }
 .nav-pills li a:hover {
-    background-color: #1679AB;
+    background-color: #fff;
+    color: black !important;
 }
 
 .dropdown-menu {

@@ -27,8 +27,8 @@ function Login ({setUser}){
           <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
             
             <div className='md:w-1/2 px-12 flex flex-col justify-center items-center'>
-                <h2 className='font-bold text-2xl text-[#002D74]'>Login</h2>
-                <p className='text-sm mt-4 text-[#002D74]' >If you already a member easily log in</p>
+                <h2 className='font-bold text-2xl text-blue-800'>Login</h2>
+                <p className='text-sm mt-4 text-blue-800' >If you already a member easily log in</p>
                 
                 <form className="flex flex-col gap-4 " onSubmit={handleSubmit}>
                 <input
@@ -65,7 +65,7 @@ function Login ({setUser}){
   </span>
 </div>
                 
-                <button className="bg-[#002D74] rounded-xl border text-white py-2 hover:scale-105 duration-300">
+                <button className="bg-blue-800 rounded-xl border text-white py-2 hover:scale-105 duration-300">
                     Iniciar Sesion
                 </button>
                 </form>
