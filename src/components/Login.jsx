@@ -27,8 +27,8 @@ function Login ({setUser}){
           <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
             
             <div className='md:w-1/2 px-12 flex flex-col justify-center items-center'>
-                <h2 className='font-bold text-2xl text-blue-800'>Login</h2>
-                <p className='text-sm mt-4 text-blue-800' >If you already a member easily log in</p>
+                <h2 className='font-bold text-2xl text-blue-800'>Inicia sesión</h2>
+                <p className='text-sm mt-4 text-blue-800' >Ingresa facilmente si ya eres miembro</p>
                 
                 <form className="flex flex-col gap-4 " onSubmit={handleSubmit}>
                 <input
@@ -36,7 +36,7 @@ function Login ({setUser}){
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="p-2 mt-8 rounded-xl border "
-                    placeholder="User"
+                    placeholder="Usuario"
                 />
                 <div className="relative">
   <input
@@ -44,7 +44,7 @@ function Login ({setUser}){
     value={password}
     onChange={(e) => setPassword(e.target.value)}
     className="p-2 rounded-xl border w-full"
-    placeholder="Password"
+    placeholder="Contraseña"
   />
   <span
     onClick={() => setPasswordVisible(!passwordVisible)}

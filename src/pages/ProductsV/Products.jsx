@@ -70,7 +70,7 @@ const Products = () => {
   return (
     <main className="dashboard flex">
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <h1 className="dashboard-title">Products</h1>
+        <h1 className="dashboard-title">Productos</h1>
         <div className="flex justify-between items-center">
           <h2 className="sub">Categoria:</h2>
           <select

@@ -77,11 +77,11 @@ const Sales = () => {
   return (
     <main className="dashboard flex">
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <h1 className="dashboard-title">Sales</h1>
+        <h1 className="dashboard-title">Ventas</h1>
         <div className="flex justify-between items-center">
           <input
             type="text"
-            placeholder="Search by name"
+            placeholder="Buscar por nombre..."
             value={searchTerm}
             onChange={handleSearchChange}
             className="mr-4 py-2 px-3 border-2 border-gray-300 p-2 rounded-md w-full md:w-auto"
@@ -107,7 +107,7 @@ const Sales = () => {
             </option>
           ))}
           </select>
-          <Link to="/cart" className="bg-blue-500 text-white px-4 py-2 rounded-md inline-block">New</Link>
+          <Link to="/cart" className="bg-blue-500 text-white px-4 py-2 rounded-md inline-block">Nueva venta</Link>
         </div>
       </div>
       <hr/>
@@ -121,7 +121,7 @@ const Sales = () => {
             totalPaid={item.totalPaid}
             paymentMethod={item.paymentMethod}
             date={item.date}
-            buttonText="Edit"
+            buttonText="Editar"
             onEditClick={() => handleEditClick(item)}
           />
         ))}

@@ -31,25 +31,25 @@ function Sidebar({setUser}){
                             <li className='nav-item text-white fs-4'>
                                 <Link className='nav-link text-white fs-5' aria-current='page' to='/sales'>
                                     <i className='bi bi-cart'></i>
-                                    <span className='ms-2 d-none d-sm-inline'>Sales</span>
+                                    <span className='ms-2 d-none d-sm-inline'>Ventas</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
                                 <Link className='nav-link text-white fs-5' aria-current='page' to='/products'>
                                     <i className='bi bi-grid'></i>
-                                    <span className='ms-2 d-none d-sm-inline'>Products</span>
+                                    <span className='ms-2 d-none d-sm-inline'>Productos</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
                                 <Link className='nav-link text-white fs-5' aria-current='page' to='/customers'>
                                     <i className='bi bi-people'></i>
-                                    <span className='ms-2 d-none d-sm-inline'>Customers</span>
+                                    <span className='ms-2 d-none d-sm-inline'>Clientes</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
                                 <Link className='nav-link text-white fs-5' aria-current='page' to='/providers'>
                                     <i className='bi bi-person-badge'></i>
-                                    <span className='ms-2 d-none d-sm-inline'>Providers</span>
+                                    <span className='ms-2 d-none d-sm-inline'>Proveedores</span>
                                 </Link>
                             </li>
                         </ul>
@@ -61,7 +61,7 @@ function Sidebar({setUser}){
                         <div className='dropdown-menu' aria-labelledby='triggerId'>
                             <Link className='dropdown-item' aria-current='page' to='/settings'>
                                 <i className='bi bi-gear-wide-connected ms-2 fs-5'></i>
-                                <span className='ms-2 d-none d-sm-inline fs-5'>Settings</span>
+                                <span className='ms-2 d-none d-sm-inline fs-5'>Ajustes</span>
                             </Link>
                             <Link className='dropdown-item' aria-current='page' onClick={handleLogout}>
                                 <i className='bi bi-box-arrow-in-left ms-2 fs-5'></i>
