@@ -2,6 +2,7 @@ import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import CardCart from '../../components/Cards/CardCart';
 import { Dropdown } from 'primereact/dropdown';
+import data from '../../DB/data.json';
 
 const Cart = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,34 +24,6 @@ const Cart = () => {
         }
     });
     }
-
-  const productList = [
-    {
-      id: 1,
-      name: "Doritos",
-      price: 100.00,
-    },
-    {
-      id: 2,
-      name: "Gaseosa",
-      price: 200.00,
-    },
-    {
-      id: 3,
-      name: "Arroz",
-      price: 300.00,
-    },
-    {
-      id: 4,
-      name: "Leche",
-      price: 200.00,
-    },
-    {
-      id: 5,
-      name: "Huevo",
-      price: 300.00,
-    },
-  ];
 
   const handleProductSelect = (e) => {
     if (e.value) {
@@ -99,7 +72,7 @@ const Cart = () => {
             className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
             id="grid-first-name"
             type="text"
-            placeholder="10********"
+            placeholder="1*********"
           />
           <label
             className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -140,7 +113,7 @@ const Cart = () => {
           <Dropdown 
             value={searchTerm} 
             onChange={handleProductSelect} 
-            options={productList} 
+            options={data} 
             optionLabel="name" 
             filter
             filterClassName='border-none p-3'
