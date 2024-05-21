@@ -8,8 +8,9 @@ import ProvidersV from './pages/ProvidersV/ProvidersV'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Cart from './pages/Cart/Cart'
 import Login from './/components/Login'
-import { useState, useEffect } from 'react'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+import { useState, useEffect } from 'react'
+import Settings from './pages/Settings/Settings'
 
 
 
@@ -24,10 +25,11 @@ const App = () => {
         { path: '/', element: <Dashboard /> },
         { path: '/dashboard', element: <Dashboard /> },
         { path: '/sales', element: <Sales /> },
-      {path: '/cart', element: <Cart />},
+        {path: '/cart', element: <Cart />},
         { path: '/products', element: <Products /> },
         { path: '/customers', element: <Customer /> },
         { path: '/providers', element: <ProvidersV /> },
+        {path: '/settings', element: <Settings />},
         { path: '*', element: <div>Not Found</div>}
       ]
     }
@@ -44,15 +46,16 @@ const App = () => {
   }, []);
 
   return (
-    <> 
-    <PrimeReactProvider>
-    {
-      !user.length > 0
-      ? <Login setUser={setUser}/>
-      : <RouterProvider router={router} />
-    }
-    </PrimeReactProvider>
-    </>
+      <>
+      <PrimeReactProvider>
+      {
+        !user.length > 0
+        ? <Login setUser={setUser}/>
+        : <RouterProvider router={router} />
+      }
+      </PrimeReactProvider>
+      
+      </>
       
   )
 }

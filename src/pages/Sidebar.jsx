@@ -59,7 +59,7 @@ function Sidebar({setUser}){
                             <i className='bi bi-person-circle'></i> <span className='ms-2 d-none d-sm-inline'>Profile</span>
                         </a>
                         <div className='dropdown-menu' aria-labelledby='triggerId'>
-                            <Link className='dropdown-item' aria-current='page' to='/dashboard'>
+                            <Link className='dropdown-item' aria-current='page' to='/settings'>
                                 <i className='bi bi-gear-wide-connected ms-2 fs-5'></i>
                                 <span className='ms-2 d-none d-sm-inline fs-5'>Settings</span>
                             </Link>

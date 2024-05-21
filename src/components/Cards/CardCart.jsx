@@ -1,20 +1,4 @@
-import React, { useState } from 'react';
-
-const CardCart = ({ name, precio, onRemove}) => {
-  const [quantity, setQuantity] = useState(1);
-
-  const handleAdd = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const handleRemove = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    } else {
-      onRemove();
-    }
-  };
-
+const CardCart = ({ name, precio, quantity, handleRemove, handleAdd}) => {
   return (
     <div className="flex flex-col bg-[#074173] rounded-lg shadow-md m-1 p-3 w-28">
       <div className="flex justify-between items-center mb-1">
