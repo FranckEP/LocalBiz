@@ -43,23 +43,5 @@
       "price": 500,
       "provider": "Riquisimo",
       "category": "Aceites"
-    },
-    {
-        "id": 6,
-        "image": "https://static.merqueo.com/images/products/large/990d8971-f922-4e03-a547-78d9eb812aca.jpg",
-        "name": "Aceite",
-        "stock": 50,
-        "price": 500,
-        "provider": "Riquisimo",
-        "category": "Aceites"
-    },
-    {
-        "id": 7,
-        "image": "https://static.merqueo.com/images/products/large/990d8971-f922-4e03-a547-78d9eb812aca.jpg",
-        "name": "Aceite",
-        "stock": 50,
-        "price": 500,
-        "provider": "Riquisimo",
-        "category": "Aceites"
     }
   ]

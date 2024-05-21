@@ -10,7 +10,11 @@
     background-color: #fff;
     color: black !important;
 }
+.active{
+    background-color: #fff;
+    color: black !important;
 
+}
 .dropdown-menu {
     background-color: transparent;
     align-items: center;

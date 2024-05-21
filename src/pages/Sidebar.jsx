@@ -23,31 +23,31 @@ function Sidebar({setUser}){
                         <hr className='text-white border-3 mt-2' />
                         <ul className='nav nav-pills flex-column mt-3'>
                             <li className='nav-item text-white fs-4'>
-                                <Link className='nav-link text-white fs-5' aria-current='page' to='/dashboard'>
+                                <Link activeClassName='active' className='nav-link text-white fs-5' aria-current='page' to='/dashboard'>
                                     <i className='bi bi-speedometer2'></i>
                                     <span className='ms-2 d-none d-sm-inline'>Dashboard</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
-                                <Link className='nav-link text-white fs-5' aria-current='page' to='/sales'>
+                                <Link activeClassName='active' className='nav-link text-white fs-5' aria-current='page' to='/sales'>
                                     <i className='bi bi-cart'></i>
                                     <span className='ms-2 d-none d-sm-inline'>Ventas</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
-                                <Link className='nav-link text-white fs-5' aria-current='page' to='/products'>
+                                <Link activeClassName='active' className='nav-link text-white fs-5' aria-current='page' to='/products'>
                                     <i className='bi bi-grid'></i>
                                     <span className='ms-2 d-none d-sm-inline'>Productos</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
-                                <Link className='nav-link text-white fs-5' aria-current='page' to='/customers'>
+                                <Link activeClassName='active' className='nav-link text-white fs-5' aria-current='page' to='/customers'>
                                     <i className='bi bi-people'></i>
                                     <span className='ms-2 d-none d-sm-inline'>Clientes</span>
                                 </Link>
                             </li>
                             <li className='nav-item text-white fs-4'>
-                                <Link className='nav-link text-white fs-5' aria-current='page' to='/providers'>
+                                <Link activeClassName='active' className='nav-link text-white fs-5' aria-current='page' to='/providers'>
                                     <i className='bi bi-person-badge'></i>
                                     <span className='ms-2 d-none d-sm-inline'>Proveedores</span>
                                 </Link>

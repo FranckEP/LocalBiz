@@ -6,19 +6,19 @@ const CardSales = ({name, id, total, totalPaid, paymentMethod, date, buttonText,
         <div className="px-6 flex-grow mt-3">
           <div className="font-bold text-lg">Sale #{id}</div>
           <p className="text-gray-700 text-sm">
-            Cx Name: {name}
+            Nombre: {name}
           </p>
           <p className="text-gray-700 text-sm">
             Total: {total}
           </p>
           <p className="text-gray-700 text-sm">
-            Total Paid: {totalPaid}
+            Total Abonado: {totalPaid}
           </p>
           <p className="text-gray-700 text-sm">
-            Payment Method: {paymentMethod}
+            Método de pago: {paymentMethod}
           </p>
           <p className="text-gray-700 text-sm">
-            Date: {date}
+            Fecha: {date}
           </p>
         </div>
         <div className="px-2 pt-2 pb-4 flex justify-end">

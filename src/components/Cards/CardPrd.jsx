@@ -8,13 +8,13 @@ const CardPrd = ({ image, name, stock, price, provider, category, buttonText, on
           Stock: {stock}
         </p>
         <p className="text-gray-700 text-sm">
-          Price: {price}
+          Precio: {price}
         </p>
         <p className="text-gray-700 text-sm">
-          Provider: {provider}
+          Proveedor: {provider}
         </p>
         <p className="text-gray-700 text-sm">
-          Category: {category}
+          Categoría: {category}
         </p>
       </div>
       <div className="px-2 pt-2 pb-4 flex justify-end">

@@ -3,6 +3,7 @@ import CardCx from '../../components/Cards/CardCx.jsx'
 import '../../styles/dashboard.css'
 import EditForm from '../../components/Forms/EditForm.jsx';
 import { Dialog } from 'primereact/dialog';
+import data from '../../DB/cxdata.json';
 
 const style = {
   width: "25vw",
@@ -21,18 +22,6 @@ const Customer = () => {
     setVisible(true);
   };
 
-  const data = [
-    {
-      id: 1044330088,
-      name: 'John Doe',
-      pending: 1300
-    },
-    {
-      id: 1053673483,
-      name: 'Jane Smith',
-      pending: 2000
-    },
-  ];
 
   const [searchTerm, setSearchTerm] = useState('');
 

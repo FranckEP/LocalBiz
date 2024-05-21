@@ -35,7 +35,7 @@ function DashBoard() {
               <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-around'}}>
                 <h1 className="subtitle">Últimas 5 ventas</h1>
                 <Link to="/sales">
-                    View all
+                    Ver todo
                 </Link>
               </div>
               <div className="top">
@@ -48,7 +48,7 @@ function DashBoard() {
               <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-around'}}>
                 <h1 className="subtitle">Últimas 5 compras</h1>
                 <Link to="/providers">
-                    View all
+                    Ver todo
                 </Link>
               </div>
               <div className="top">

@@ -72,7 +72,7 @@ const Cart = () => {
     <main className="dashboard flex">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <h1 className="dashboard-title">Carrito</h1>
-        <Link className='rounded border bg-[#2563EB] text-white' to='/sales'>Ir a ventas</Link>
+        <Link className='rounded border bg-[#2563EB] text-white p-2' to='/sales'>Ir a ventas</Link>
       </div>
       <hr />
       <div className="-mx-3 md:flex mb-6">
