@@ -3,6 +3,7 @@ import '../../styles/dashboard.css'
 import CardPrd from '../../components/Cards/CardPrd.jsx'
 import { Dialog } from 'primereact/dialog';
 import FormProduct from '../../components/Forms/FormProduct.jsx';
+import data from '../../DB/data.json';
 
 const style = {
   width: "25vw",
@@ -12,7 +13,7 @@ const style = {
 
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(data);
   const [visible, setVisible] = useState(false);
   
 
@@ -21,32 +22,6 @@ const Products = () => {
     setVisible(true);
   };
 
-  const data = [
-    {
-      image: "https://meltingpot-food.in/wp-content/uploads/2021/05/PaniPuriConcentrate_front.jpg",
-      name: "Indi",
-      stock: 10,
-      price: 100,
-      provider: "PaniPuri",
-      category: "Food",
-    },
-    {
-      image: "https://images.squarespace-cdn.com/content/v1/5c5b530f8d974055c4891586/1549736867236-XPU9OEQLCZ7U3XWY8I6J/Doritos-Net-Qty-Label-copy.png",
-      name: "Doritos",
-      stock: 20,
-      price: 200,
-      provider: "Doritos",
-      category: "Product",
-    },
-    {
-      image: "https://images-platform.99static.com/HR3TgAJTUmwspCyqO7qMU3YeVOc=/0x0:1000x1000/500x500/top/smart/99designs-contests-attachments/89/89577/attachment_89577057",
-      name: "Product 3",
-      stock: 30,
-      price: 300,
-      provider: "Kick Nuts",
-      category: "Granos",
-    }
-  ];
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
 

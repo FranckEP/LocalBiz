@@ -1,8 +1,9 @@
-import { DonutChart, Legend } from '@tremor/react';
+import { Chart } from 'primereact/chart';
+import {useState, useEffect} from 'react';
 
 const sales = [
   {
-    name: 'Nequi',
+    name: 'Transferencia',
     sales: 980,
   },
   {
@@ -10,35 +11,47 @@ const sales = [
     sales: 456,
   },
   {
-    name: 'Fiado',
+    name: 'Pendiente',
     sales: 390,
   },
 ];
 
-const valueFormatter = (number) =>
-  `$ ${Intl.NumberFormat('us').format(number).toString()}`;
-
 function DonutChartUsageExample() {
+  const [chartData, setChartData] = useState({});
+  const [chartOptions, setChartOptions] = useState({});
+
+    useEffect(() => {
+        const documentStyle = getComputedStyle(document.documentElement);
+        const data = {
+            labels: ['Transferencia', 'Efectivo', 'Pendiente'],
+            datasets: [
+                {
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        documentStyle.getPropertyValue('--blue-500'), 
+                        documentStyle.getPropertyValue('--yellow-500'), 
+                        documentStyle.getPropertyValue('--green-500')
+                    ],
+                    hoverBackgroundColor: [
+                        documentStyle.getPropertyValue('--blue-400'), 
+                        documentStyle.getPropertyValue('--yellow-400'), 
+                        documentStyle.getPropertyValue('--green-400')
+                    ]
+                }
+            ]
+        };
+        const options = {
+            cutout: '60%'
+        };
+
+        setChartData(data);
+        setChartOptions(options);
+    }, []);
   return (
     <>
-      <div className="flex items-center justify-center space-x-6">
-        <DonutChart
-          data={sales}
-          category="sales"
-          index="name"
-          valueFormatter={valueFormatter}
-          colors={['blue', 'violet', 'yellow']}
-          className="w-60 h-60"
-          variant='donut'
-        />
-      </div>
-      <div className="flex items-center justify-center space-x-6">
-        <Legend
-            categories={['Nequi', 'Efectivo', 'Fiado']}
-            colors={['blue', 'violet', 'yellow']}
-            className="max-w-xs mt-3"
-            />
-      </div>
+      <div className="flex justify-content-center">
+            <Chart type="doughnut" data={chartData} options={chartOptions} className="flex w-96 md:w-30rem" />
+        </div>
     </>
   );
 }

@@ -142,9 +142,10 @@ const Cart = () => {
             onChange={handleProductSelect} 
             options={productList} 
             optionLabel="name" 
-            filter 
+            filter
+            filterClassName='border-none p-3'
             placeholder="Selecciona un producto" 
-            className="w-full md:w-14rem p-2" 
+            className="w-full md:w-14rem p-2 border-none"
             />
           </div>
           <div className='h-[23rem] overflow-y-auto mt-2'>

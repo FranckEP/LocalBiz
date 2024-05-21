@@ -89,11 +89,13 @@
   }
 
   .bar-chart {
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     align-items: center;
   }
 
   .donut-chart {
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     align-items: center;
   }
